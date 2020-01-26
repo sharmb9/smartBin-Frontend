@@ -12,4 +12,53 @@ const config = {
   };
 
 firebase.initializeApp(config);
-export default firebase;
+const db = firebase.firestore()
+
+
+db.collection("items")
+.where("item_tag", "==", "Plastic bottle")
+.get()
+.then(querySnapshot => {
+  const data = querySnapshot.docs.map(doc => doc.data());
+  console.log(data[0].item_cat + " " + data[0].item_tag); // array of cities objects
+});
+
+// db.collection('items').get()
+//   .then((snapshot) => {
+//     snapshot.forEach((doc) => {
+//       console.log(doc.id, '=>', doc.data());
+//     });
+//   })
+//   .catch((err) => {
+//     console.log('Error getting documents', err);
+//   });
+
+// get the whole collection
+// db.collection("items")
+// .get()
+// .then(querySnapshot => {
+//   const data = querySnapshot.docs.map(doc => doc.data());
+//   const obj = JSON.parse(JSON.stringify(data));
+//   console.log((data[0].item_cat)); // array of cities objects
+// });
+
+
+// db.collection('items').get()
+//   .then((snapshot) => {
+//     snapshot.forEach((doc) => {
+//       console.log(doc.id, '=>', doc.data());
+//     });
+//   })
+//   .catch((err) => {
+//     console.log('Error getting documents', err);
+//   });
+
+// db.collection("items")
+// .doc('LA')
+// .get()
+// .then(doc => {
+//   const data = doc.data();
+//   console.log(data); // LA city object with key-value pair
+// });
+//prev was export firebase
+export default db;
