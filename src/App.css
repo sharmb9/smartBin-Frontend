@@ -1,11 +1,208 @@
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .page{
+  
+} */
+
+.navbar {
+  font-weight: bold;
+  padding: 0 1rem;
+  height: 55px;
+  max-width: 1100px;
+  margin: auto;
+  justify-content: space-between;
 }
+
+
+.nav_link {
+  color: rgba(0, 0, 0, .6);
+}
+
+/* .row {
+  text-align: left;
+} */
+
+#container {
+  /* min-height: 100vh;
+  
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto; */
+  text-align: center;
+  min-height: 90vh;
+max-width: inherit;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    max-width: 1100px;
+} 
+
+
+
+.blurb {
+  display: inline-block;
+  /* margin-top: 18%;
+  margin-bottom: 15%; */
+}
+
+/* #about_blurb {
+   margin-top: 18%;
+  margin-bottom: 15%;
+} */
+
+/* #project_blurb{
+  text-align: left;
+} */
+
+.about_name {
+  background: gold;
+}
+
+.intro {
+  background: antiquewhite;
+  color: rgba(0, 0, 0, .6);
+  font-size: 1.5em;
+  font-family: monospace;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.intro a {
+  color: black
+}
+
+
+.bg-light {
+  background-color: white !important;
+}
+
+
+
+
+/* .container {
+  margin-top: 5%;
+} */
+
+
+
+.btn {
+  color: white;
+  background: #343a40;
+}
+
+ul {
+  padding: inherit;
+}
+
+ul>li {
+  display: inline;
+  font-size: 3em;
+  padding: 15px;
+}
+
+.col-md-4{
+  margin-bottom: 5%;
+  font-size: 1.5em;
+  font-family: monospace;
+  font-weight: bold;
+  
+}
+
+.col-md-4 a{
+  color:black;
+  
+  
+}
+
+.project-detail{
+  background: antiquewhite;
+  
+}
+
+#description{
+  color:rgba(0, 0, 0, .6);
+  
+}
+
+.card-title {
+  background-color: gold;
+  font-weight: bold;
+}
+
+
+#contact_blurb {
+  margin-top: 5%;
+}
+
+
+a:hover {
+  text-decoration: none;
+  border-bottom: 0.25rem solid;
+  border-color: gold;
+  color: black;
+}
+
+
+
+
+.contact_icon {
+  color: #343a40;
+}
+
+#about_title h2{
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  /* border-right: .15em solid black; */
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .12em;
+  /* Adjust as needed */
+  animation:
+    typing 3.0s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.title h2{
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  
+  color: black;
+
+}
+
+
+/* The typing effect */
+/* @keyframes typing { */
+  /* from {
+    width: 0
+  } */
+
+  /* temp fix */
+  /* to {
+    width: 30%
+  } */
+/* } */
+
+
+
+#contact {
+  text-align: center;
+}
+
+.resume_button{
+  text-align: center;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -32,6 +229,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
