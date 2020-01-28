@@ -2,9 +2,9 @@ import React from 'react';
 import PieChart from 'react-minimal-pie-chart';
 import db from "./Firestore";
 
-// Need to display most recent cateogry and label
+// Need to display most recent cateogry and label (ONLY DISPLAYS QUERIED RIGHT NOW)
 //need to send catefgory(0,1,2) to the bin
-// Need to display total number for each catoegory on pie chart
+
 
 class Stats extends React.Component {
     constructor() {
@@ -25,7 +25,7 @@ class Stats extends React.Component {
      componentDidMount() {
 
         db.collection("items")
-            .where("item_tag", "==", "Plastic bottle")
+            .where("item_tag", "==", "Plastic bottle" )
             .get()
             .then(querySnapshot => {
                 const data = querySnapshot.docs.map(doc => doc.data());
@@ -33,7 +33,7 @@ class Stats extends React.Component {
                     label:data[0].item_tag,
                     category:data[0].item_cat
                 })
-                console.log(data); // array of item objects
+                // console.log(data[0].item_tag); // array of item objects
             });
 
     //     db.collection("items")
@@ -68,13 +68,13 @@ class Stats extends React.Component {
                         </div>
                         <p className="intro">
 
-                            {/* <PieChart
+                            <PieChart
                             data={[
-                                { title: 'One', value: 10, color: '#E38627' },
-                                { title: 'Two', value: 15, color: '#C13C37' },
-                                { title: 'Three', value: 20, color: '#6A2135' },
+                                { title: 'Garbage', value: 23, color: '#333333' },
+                                { title: 'Compost', value: 35, color: '#00AA22' },
+                                { title: 'Recycling', value: 42, color: '#0011EE' },
                             ]}
-                        /> */}
+                        />
                         </p>
                         <br></br>
                     </p>

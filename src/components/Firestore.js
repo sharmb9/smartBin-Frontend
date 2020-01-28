@@ -15,13 +15,13 @@ firebase.initializeApp(config);
 const db = firebase.firestore()
 
 
-db.collection("items")
-.where("item_tag", "==", "Plastic bottle")
-.get()
-.then(querySnapshot => {
-  const data = querySnapshot.docs.map(doc => doc.data());
-  console.log(data[0].item_cat + " " + data[0].item_tag); // array of cities objects
-});
+// db.collection("items")
+// .where("item_tag", "==", "Plastic bottle")
+// .get()
+// .then(querySnapshot => {
+//   const data = querySnapshot.docs.map(doc => doc.data());
+//   console.log(data[0].item_cat + " " + data[0].item_tag); // array of cities objects
+// });
 
 // db.collection('items').get()
 //   .then((snapshot) => {
