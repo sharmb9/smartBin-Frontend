@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 
 const config = {
-    apiKey: "AIzaSyDBUPJV4893xIWpdElOqoN_ru7FI-JlQkY",
+    apiKey: "";
     authDomain: "smartbin-1be82.firebaseapp.com",
     databaseURL: "https://smartbin-1be82.firebaseio.com",
     projectId: "smartbin-1be82",
